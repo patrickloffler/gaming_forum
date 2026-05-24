@@ -1,0 +1,99 @@
+
+        :root {
+            --neon-cyan: #00f5ff;
+            --neon-purple: #bf5fff;
+            --neon-green: #39ff14;
+            --bg-dark: #080b0f;
+            --bg-card: #0d1117;
+            --bg-panel: #111827;
+            --border-dim: #1f2937;
+        }
+* { font-family: 'Exo 2', sans-serif; }
+h1, h2, .orbitron { font-family: 'Exo 2', sans-serif; }
+        body { background-color: var(--bg-dark); }
+
+        /* Animated gradient background scanlines */
+        body::before {
+            content: '';
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,245,255,0.015) 2px, rgba(0,245,255,0.015) 4px);
+            pointer-events: none; z-index: 0;
+        }
+
+        /* Neon glow utilities */
+        .neon-cyan { color: var(--neon-cyan); text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan); }
+        .neon-purple { color: var(--neon-purple); text-shadow: 0 0 10px var(--neon-purple); }
+        .neon-green { color: var(--neon-green); text-shadow: 0 0 8px var(--neon-green); }
+
+        .border-neon-cyan { border-color: var(--neon-cyan); box-shadow: 0 0 8px rgba(0,245,255,0.3), inset 0 0 8px rgba(0,245,255,0.05); }
+        .border-neon-purple { border-color: var(--neon-purple); box-shadow: 0 0 8px rgba(191,95,255,0.3); }
+
+        /* Card hover effect */
+        .game-card { transition: all 0.2s ease; border: 1px solid var(--border-dim); }
+        .game-card:hover { border-color: var(--neon-cyan); box-shadow: 0 0 20px rgba(0,245,255,0.15); transform: translateY(-2px); }
+
+        /* Notification dismiss */
+        .notification { animation: slideIn 0.3s ease; }
+        @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+        /* Nav link glow on hover */
+        .nav-link { position: relative; transition: color 0.2s; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: var(--neon-cyan); transition: width 0.2s; }
+        .nav-link:hover::after { width: 100%; }
+
+        /* Input focus glow */
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--neon-cyan) !important;
+            box-shadow: 0 0 0 1px var(--neon-cyan), 0 0 12px rgba(0,245,255,0.2) !important;
+        }
+
+        /* Button glow */
+.btn-cyber {
+    background: linear-gradient(135deg, #0d1117, #1a2332);
+    border: 1px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    text-shadow: 0 0 8px var(--neon-cyan);
+    box-shadow: 0 0 12px rgba(0,245,255,0.2);
+    transition: all 0.2s;
+    font-family:  'Exo 2', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+}
+        .btn-cyber:hover {
+            background: rgba(0,245,255,0.1);
+            box-shadow: 0 0 20px rgba(0,245,255,0.4);
+        }
+        .btn-danger {
+            border-color: #ff3366;
+            color: #ff3366;
+            text-shadow: 0 0 8px #ff3366;
+            box-shadow: 0 0 12px rgba(255,51,102,0.2);
+        }
+        .btn-danger:hover { background: rgba(255,51,102,0.1); box-shadow: 0 0 20px rgba(255,51,102,0.4); }
+        .btn-success {
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+            text-shadow: 0 0 8px var(--neon-green);
+            box-shadow: 0 0 12px rgba(57,255,20,0.2);
+        }
+        .btn-success:hover { background: rgba(57,255,20,0.1); box-shadow: 0 0 20px rgba(57,255,20,0.4); }
+
+        /* Platform badge */
+        .platform-badge {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.55rem;
+            letter-spacing: 0.08em;
+            padding: 2px 8px;
+            border-radius: 2px;
+        }
+
+        /* Role badge */
+        .role-admin { color: #ffd700; border-color: #ffd700; text-shadow: 0 0 6px #ffd700; }
+        .role-moderator { color: var(--neon-purple); border-color: var(--neon-purple); }
+        .role-user { color: #4b5563; border-color: #374151; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--neon-cyan); border-radius: 2px; }
