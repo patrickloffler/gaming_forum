@@ -58,7 +58,7 @@
                         
                         <div class="flex-1 p-5">
                             <div class="flex flex-wrap items-start gap-3">
-                               // obrazek
+                            
                                 <?php if (!empty($images[0])): ?>
                                 <div class="w-20 h-20 flex-shrink-0 rounded overflow-hidden border border-slate-700">
                                     <img src="<?= BASE_URL ?>/uploads/<?= htmlspecialchars($images[0]) ?>" 
