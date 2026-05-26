@@ -3,11 +3,11 @@ require_once '../app/controllers/BaseController.php';
 
 class PostController extends BaseController {
 
-    private function loadDeps(): array {
+    private function loadDeps(): array {  //pomocna metoda, destrukturovani pole
         require_once '../app/models/Post.php';
         require_once '../app/models/Category.php';
         $db = $this->db();
-        return [new Post($db), new Category($db), $db];
+        return [new Post($db), new Category($db), $db]; //vytvori objekty, preda pripojeni k db
     }
 
     // Seznam příspěvků (homepage)
@@ -45,7 +45,7 @@ class PostController extends BaseController {
     // Uložení nového příspěvku
     public function store() {
         $this->requireLogin();
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') { header('Location: ' . BASE_URL . '/index.php?url=post/create'); exit; }
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') { header('Location: ' . BASE_URL . '/index.php?url=post/create'); exit; } //kdyby nebyla negace, musi se zapsat vse do if bloku
 
         $title      = htmlspecialchars($_POST['title'] ?? '');
         $content    = htmlspecialchars($_POST['content'] ?? '');

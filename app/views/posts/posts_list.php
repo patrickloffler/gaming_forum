@@ -39,8 +39,8 @@
         <div class="game-card rounded-lg p-16 text-center bg-[#0d1117]">
             <p class="orbitron text-slate-600 text-sm tracking-widest">// ŽÁDNÉ PŘÍSPĚVKY //</p>
             <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="<?= BASE_URL ?>/index.php?url=post/create" class="btn-cyber inline-block mt-4 px-6 py-2 rounded">
-                    PŘIDAT PRVNÍ PŘÍSPĚVEK
+                <a href="<?= BASE_URL ?>/index.php?url=post/create" class="btn-cyber inline-block mt-4 px-6 py-2 rounded">  <!-- pokud je uzivatel prihlasen -->
+                    PŘIDAT PRVNÍ PŘÍSPĚVEK  
                 </a>
             <?php endif; ?>
         </div>

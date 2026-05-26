@@ -32,7 +32,7 @@ h1, h2, .orbitron { font-family: 'Exo 2', sans-serif; }
         .game-card { transition: all 0.2s ease; border: 1px solid var(--border-dim); }
         .game-card:hover { border-color: var(--neon-cyan); box-shadow: 0 0 20px rgba(0,245,255,0.15); transform: translateY(-2px); }
 
-        /* Notification dismiss */
+        /* Notification dismiss - animace */
         .notification { animation: slideIn 0.3s ease; }
         @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 
