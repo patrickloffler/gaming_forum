@@ -88,7 +88,7 @@ h1, h2, .orbitron { font-family: 'Exo 2', sans-serif; }
             border-radius: 2px;
         }
 
-        /* Role badge */
+        /* odznak role */
         .role-admin { color: #ffd700; border-color: #ffd700; text-shadow: 0 0 6px #ffd700; }
         .role-moderator { color: var(--neon-purple); border-color: var(--neon-purple); }
         .role-user { color: #4b5563; border-color: #374151; }

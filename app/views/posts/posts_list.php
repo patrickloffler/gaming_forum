@@ -58,7 +58,7 @@
                         
                         <div class="flex-1 p-5">
                             <div class="flex flex-wrap items-start gap-3">
-                                <!-- Thumbnail -->
+                               // obrazek
                                 <?php if (!empty($images[0])): ?>
                                 <div class="w-20 h-20 flex-shrink-0 rounded overflow-hidden border border-slate-700">
                                     <img src="<?= BASE_URL ?>/uploads/<?= htmlspecialchars($images[0]) ?>" 
@@ -67,7 +67,7 @@
                                 <?php endif; ?>
 
                                 <div class="flex-1 min-w-0">
-                                    <!-- Meta badges -->
+                                    
                                     <div class="flex flex-wrap items-center gap-2 mb-2">
                                         <?php if ($post['category_name']): ?>
                                         <span class="platform-badge border py-0.5" 

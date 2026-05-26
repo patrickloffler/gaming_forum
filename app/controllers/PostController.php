@@ -111,7 +111,7 @@ class PostController extends BaseController {
         $categoryId = (int)($_POST['category_id'] ?? 0);
         $images     = $this->processImageUploads();
 
-        // Zachovat stávající obrázky pokud žádné nové nenahrány
+        // Zachová obrázky, pokud nebyly nahrány nové
         if (empty($images)) {
             $images = json_decode($post['images'] ?? '[]', true) ?: [];
         }

@@ -102,7 +102,7 @@ class UserController extends BaseController {
         if (!$id) { header('Location: ' . BASE_URL . '/index.php?url=user/list'); exit; }
 
         $userId = (int)$id;
-        // Admin nemůže smazat sám sebe přes tuto akci
+        // Admin nemůže smazat sám sebe 
         if ($userId === $_SESSION['user_id']) {
             $this->addErrorMessage('Nemůžeš smazat vlastní účet přes správu uživatelů.');
             header('Location: ' . BASE_URL . '/index.php?url=user/list'); exit;
